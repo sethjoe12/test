@@ -1,0 +1,77 @@
+# version: '3.1'
+
+# services:
+
+#   db:
+#     image: mysql
+    
+#     command: --default-authentication-plugin=mysql_native_password
+#     restart: always
+#     environment:
+#       MYSQL_ROOT_PASSWORD: example
+#       MYSQL_DATABASE: test_db
+
+#   adminer:
+#     image: adminer
+#     restart: always
+#     ports:
+#       - 8080:8080
+
+
+
+
+version: '3.8'
+services:
+  db:
+    image: mysql/mysql-server:latest
+    
+
+    container_name: fakedbb
+    command: --default-authentication-plugin=mysql_native_password
+ 
+    environment:
+       MYSQL_ROOT_PASSWORD: sethjoe
+       
+       MYSQL_DATABASE: test_demo
+    ports:
+      - "3303:3306"
+
+
+
+
+
+
+
+
+# version: '3.8'
+# services:
+#   db:
+#     image: mysql/mysql-server:latest
+    
+
+#     container_name: seth_Sql_server4
+#     command: --default-authentication-plugin=mysql_native_password
+ 
+#     environment:
+#        MYSQL_ROOT_PASSWORD: Sethjoe12345
+#        MYSQL_USER: root
+#        MYSQL_PASSWORD: seth
+#        MYSQL_DATABASE: test_demo
+#     ports:
+#       - "3309:3306"
+
+#   web:
+#     build: .
+#     ports:
+#       - "11000:11000"
+#     volumes:
+#       - ".:/app"
+#     depends_on:
+#       - db
+#     links:
+#       - "db:database"
+  
+
+
+
+
